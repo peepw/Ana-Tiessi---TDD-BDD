@@ -1,0 +1,25 @@
+{
+  "name": "projeto-tdd-login",
+  "version": "1.0.0",
+  "description": "Projeto de TDD para sistema de login com Firebase",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "tdd",
+    "login",
+    "authentication",
+    "firebase"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "firebase": "^9.22.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
