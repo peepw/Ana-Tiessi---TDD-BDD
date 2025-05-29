@@ -1,10 +1,11 @@
-# Ana-Tiessi---TDD-BDD
+# Ana-Tiessi---TDD
+# Pedro Wagner Rocha Silva 22.10091-0
+# Felipe Ariel Chehaibar 22.00488-2
 # Projeto Integrador - Autenticação com TDD
 
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green)](https://nodejs.org/)
 [![Jest](https://img.shields.io/badge/Jest-Testing-red)](https://jestjs.io/)
 
-# Pedro Wagner Rocha Silva 22.10091-0
 Implementação de um sistema de autenticação (login e cadastro) seguindo a metodologia TDD (Test-Driven Development).
 
 ## 📋 Pré-requisitos
