@@ -59,3 +59,59 @@ class AuthService {
     return this.userRepository.create(userData);
   }
 }
+describe('AuthService - Login', () => {
+  test('Deve permitir login com credenciais válidas', async () => {
+    const mockUser = {
+      email: 'teste@example.com',
+      senha: '$2b$10$hashedpassword' 
+    };
+    
+    UserRepository.prototype.findByEmail.mockResolvedValue(mockUser);
+    jest.spyOn(bcrypt, 'compareSync').mockReturnValue(true);
+    
+    const authService = new AuthService(new UserRepository());
+    const result = await authService.login('teste@example.com', 'senhaSegura123');
+    
+    expect(result).toEqual(mockUser);
+  });
+
+  test('Deve falhar com e-mail inválido', async () => {
+    UserRepository.prototype.findByEmail.mockResolvedValue(null);
+    
+    const authService = new AuthService(new UserRepository());
+    
+    await expect(authService.login('invalido@example.com', 'senha123'))
+      .rejects
+      .toThrow('Credenciais inválidas');
+  });
+
+  test('Deve falhar com senha inválida', async () => {
+    const mockUser = {
+      email: 'teste@example.com',
+      senha: '$2b$10$hashedpassword'
+    };
+    
+    UserRepository.prototype.findByEmail.mockResolvedValue(mockUser);
+    jest.spyOn(bcrypt, 'compareSync').mockReturnValue(false);
+    
+    const authService = new AuthService(new UserRepository());
+    
+    await expect(authService.login('teste@example.com', 'senhaErrada'))
+      .rejects
+      .toThrow('Credenciais inválidas');
+  });
+});
+const bcrypt = require('bcrypt');
+
+class AuthService {
+
+  async login(email, senha) {
+    const user = await this.userRepository.findByEmail(email);
+    
+    if (!user || !bcrypt.compareSync(senha, user.senha)) {
+      throw new Error('Credenciais inválidas');
+    }
+    
+    return user;
+  }
+}
