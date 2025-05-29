@@ -29,3 +29,9 @@ Crie um arquivo .env na raiz do projeto com as seguintes variáveis:
 PORT=3000
 MONGODB_URI=mongodb://localhost:27017/projeto-integrado
 JWT_SECRET=seuSegredoSuperSecreto
+Executando os testes
+Para rodar a suíte de testes:
+npm test
+Para rodar os testes com cobertura:
+bash
+npm run test:coverage
