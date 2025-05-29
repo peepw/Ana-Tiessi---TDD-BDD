@@ -4,6 +4,7 @@
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green)](https://nodejs.org/)
 [![Jest](https://img.shields.io/badge/Jest-Testing-red)](https://jestjs.io/)
 
+# Pedro Wagner Rocha Silva 22.10091-0
 Implementação de um sistema de autenticação (login e cadastro) seguindo a metodologia TDD (Test-Driven Development).
 
 ## 📋 Pré-requisitos
