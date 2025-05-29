@@ -2,6 +2,7 @@
 # Pedro Wagner Rocha Silva 22.10091-0
 # Felipe Ariel Chehaibar 22.00488-2
 # Lucas Alves 24.00902-4
+# Fabricio Aguiar 24.95005-0
 # Projeto Integrador - Autenticação com TDD
 
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green)](https://nodejs.org/)
