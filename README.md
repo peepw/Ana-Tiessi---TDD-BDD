@@ -22,3 +22,10 @@ Implementação de um sistema de autenticação (login e cadastro) seguindo a me
 ```bash
 git clone https://github.com/seu-usuario/projeto-integrador.git
 cd projeto-integrador
+2. Instale as dependências:
+npm install
+Configuração
+Crie um arquivo .env na raiz do projeto com as seguintes variáveis:
+PORT=3000
+MONGODB_URI=mongodb://localhost:27017/projeto-integrado
+JWT_SECRET=seuSegredoSuperSecreto
